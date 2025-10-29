@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Tailwind CSS</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- React and Babel CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function ProductCard() {
+            return (
+                <div className="max-w-[300px]">
+                    <img src="img/placeholder.jpg" alt="placeholder" className="max-w-[300px]" />
+                    <p>Awesome product</p>
+                    <button className="bg-sky-600 border-none rounded text-white px-4 py-2 cursor-pointer">Buy Now</button>
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <>
+                    <header className="bg-black text-white p-4">
+                        <h1 className="text-3xl font-bold">React Tailwind CSS</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni.</p>
+                    </header>
+                    <main className="m-4">
+                        <h2 className="text-xl font-bold">Main Content</h2>
+                        <p>This is the main content area.</p>
+                        <section className="flex flex-wrap gap-4">
+                            <ProductCard />
+                            <ProductCard />
+                            <ProductCard />
+                        </section>
+                    </main>
+                    <footer className="bg-black p-4">
+                        <p className="text-white">Footer Information</p>
+                    </footer>
+                </>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
