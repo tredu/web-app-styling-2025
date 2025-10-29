@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head CSS</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0%;
+        }
+        header {
+            background-color: black;
+        }
+        header h1,
+        header p,
+        footer p {
+            color: white;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        section div {
+            max-width: 300px;
+        }
+        section img {
+            max-width: 300px;
+        }
+        button {
+            background-color: rgb(0, 140, 255);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(38, 157, 255);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            padding: 0.5em 1em;
+            cursor: pointer;
+        }
+        footer {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Head CSS Example</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni.</p>
+    </header>
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main content area.</p>
+        <section>
+            <div>
+                <img src="img/placeholder.jpg" alt="placeholder">
+                <p>Awesome product</p>
+                <button>Buy Now</button>
+            </div>
+            <div>
+                <img src="img/placeholder.jpg" alt="placeholder">
+                <p>Awesome product</p>
+                <button>Buy Now</button>
+            </div>
+            <div>
+                <img src="img/placeholder.jpg" alt="placeholder">
+                <p>Awesome product</p>
+                <button>Buy Now</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Footer Information</p>
+    </footer>
+</body>
+</html>

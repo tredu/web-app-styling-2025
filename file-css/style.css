@@ -1,0 +1,52 @@
+:root{
+    --primary-main: rgb(0, 140, 255);
+    --primary-light: rgb(38, 157, 255);
+}
+body {
+    margin: 0;
+    padding: 0%;
+}
+header {
+    background-color: black;
+}
+header h1,
+header p,
+footer p {
+    color: white;
+}
+header a, header a:visited{
+    color: var(--primary-main);
+}
+header a:hover{
+    color: var(--primary-light);
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+section div {
+    max-width: 300px;
+}
+section img {
+    max-width: 300px;
+}
+button {
+    background-color: var(--primary-main);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--primary-light);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+footer {
+    background-color: black;
+}
