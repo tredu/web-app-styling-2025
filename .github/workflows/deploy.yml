@@ -47,17 +47,21 @@ jobs:
         working-directory: ./mui-theme
         run: npm run export || echo "No export script, using build output"
 
-      - name: Create deployment directory
+      - name: Create deployment directory and copy static content
         run: |
           mkdir -p deploy
-          # Copy root HTML files
-          cp index.html deploy/ 2>/dev/null || true
-          cp -r *.html deploy/ 2>/dev/null || true
-          cp -r css deploy/ 2>/dev/null || true
-          cp -r js deploy/ 2>/dev/null || true
-          cp -r images deploy/ 2>/dev/null || true
-          cp -r assets deploy/ 2>/dev/null || true
-          # Add any other static files/folders from root
+          cp index.html style.css deploy/
+          cp -r inline-css head-css file-css tailwind-css bootstrap-css react-tailwind-css deploy/
+
+      - name: Copy Next.js build to mui-theme directory
+        run: |
+          mkdir -p deploy/mui-theme
+          cp -r mui-theme/out/* deploy/mui-theme/
+
+      - name: Fix Next.js image links for GitHub Pages
+        run: |
+          find deploy/mui-theme -type f -name '*.html' -exec sed -i 's|src="/|src="https://tredu.github.io/|g' {} +
+          find deploy/mui-theme -type f -name '*.js' -exec sed -i 's|src:"/|src:"https://tredu.github.io/|g' {} +
           
       - name: Copy Next.js build to mui-theme directory
         run: |
