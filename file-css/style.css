@@ -1,36 +1,52 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
     --primary-main: rgb(0, 140, 255);
     --primary-light: rgb(38, 157, 255);
 }
+
 body {
     margin: 0;
     padding: 0%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
 header {
     background-color: black;
 }
+
 header h1,
 header p,
 footer p {
     color: white;
 }
-header a, header a:visited{
+
+header a,
+header a:visited {
     color: var(--primary-main);
 }
-header a:hover{
+
+header a:hover {
     color: var(--primary-light);
 }
+
 section {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }
+
 section div {
     max-width: 300px;
 }
+
 section img {
     max-width: 300px;
 }
+
 button {
     background-color: var(--primary-main);
     border: none;
@@ -39,6 +55,7 @@ button {
     padding: 0.5em 1em;
     cursor: pointer;
 }
+
 button:hover {
     background-color: var(--primary-light);
     border: none;
@@ -47,6 +64,7 @@ button:hover {
     padding: 0.5em 1em;
     cursor: pointer;
 }
+
 footer {
     background-color: black;
 }
