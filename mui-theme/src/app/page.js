@@ -21,7 +21,7 @@ export default function Home() {
         />
         <Box>
           <Typography variant="h3" component="h1" gutterBottom>
-            MUI Theme, next.js & React example
+            MUI Theme, Next.js & React example
           </Typography>
           <Typography variant="body1" gutterBottom>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni.

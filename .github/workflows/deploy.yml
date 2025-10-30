@@ -47,7 +47,28 @@ jobs:
         working-directory: ./mui-theme
         run: npm run export || echo "No export script, using build output"
 
+      # Build and copy emotion-css (Next.js)
+      - name: Install dependencies for emotion-css
+        working-directory: ./emotion-css
+        run: npm ci
 
+      - name: Build emotion-css
+        working-directory: ./emotion-css
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /emotion-css
+
+      - name: Export emotion-css as static site
+        working-directory: ./emotion-css
+        run: npm run export || echo "No export script, using build output"
+
+      - name: Copy Next.js build to emotion-css directory
+        run: |
+          mkdir -p deploy/emotion-css
+          cp -r emotion-css/out/* deploy/emotion-css/ 2>/dev/null || \
+          cp -r emotion-css/.next/static deploy/emotion-css/ 2>/dev/null || \
+          cp -r emotion-css/build/* deploy/emotion-css/ 2>/dev/null || true
+          
       # Build and copy antd-vite
       - name: Install dependencies for antd-vite
         working-directory: ./antd-vite
