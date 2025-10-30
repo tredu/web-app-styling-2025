@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,56 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
+
 <body>
     <main>
         <h1>Web App Styling</h1>
         <section>
-            <a href="inline-css/">Inline CSS</a>
-            <a href="head-css/">Head style-tag CSS</a>
-            <a href="file-css/">External CSS file</a>
+            <div class="item">
+                <div class="badges"> <span class="badge">Element-level</span></div>
+                <a href="inline-css/">Inline CSS</a>
+            </div>
+            <div class="item">
+                <div class="badges"> <span class="badge">Page-level</span></div>
+                <a href="head-css/">Head style-tag CSS</a>
+            </div>
+            <div class="item">
+                <div class="badges"> <span class="badge">Global/site-level</span></div>
+                <a href="file-css/">External CSS file</a>
+            </div>
             <hr>
-            <a href="tailwind-css/">Tailwind CSS</a>
+            <div class="item">
+                <div class="badges"> <span class="badge">Utility classes</span></div>
+
+                <a href="tailwind-css/">Tailwind CSS</a>
+            </div>
             <hr>
-            <a href="bootstrap-css/">Bootstrap</a>
-            <a href="react-tailwind-css/">React Tailwind CSS</a>
+            <div class="item">
+                <div class="badges">
+                    <span class="badge">Component library</span>
+                    <span class="badge">Utility classes</span>
+                </div>
+                <a href="bootstrap-css/">Bootstrap</a>
+            
+            </div>
+            <div class="item">
+                <div class="badges">
+                    <span class="badge">Custom components</span>
+                    <span class="badge">Utility classes</span>
+                </div>
+                <a href="react-tailwind-css/">Tailwind CSS & React</a>
+            </div>
             <hr>
-            <a href="mui-theme/">MUI Theme, React & Next.js</a>
+            <div class="item">
+                <div class="badges">
+                    <span class="badge">Component library</span>
+                     <span class="badge">Utility classes</span>
+                     <span class="badge">Node.js</span>
+                </div>
+                <a href="mui-theme/">MUI Theme, React & Next.js</a>
+            </div>
         </section>
     </main>
 </body>
+
 </html>
