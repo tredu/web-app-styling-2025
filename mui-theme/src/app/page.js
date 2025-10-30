@@ -13,7 +13,7 @@ export default function Home() {
         borderBottom: '1px solid #ccc', padding: 1, mb: 4
       }}>
         <Image
-          src="/next.svg"
+          src="./next.svg"
           alt="Next.js logo"
           width={100}
           height={20}

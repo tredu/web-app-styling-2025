@@ -7,13 +7,13 @@ import Button from "@mui/material/Button";
 export default function ProductCard() {
     return (
         <Card sx={{ maxWidth: 300 }}>
-        <Image
-          src="/placeholder.jpg"
-          alt="Product Image"
-          width={300}
-          height={200}
-          priority
-        />
+                <Image
+                    src="./placeholder.jpg"
+                    alt="Product Image"
+                    width={300}
+                    height={200}
+                    priority
+                />
             <CardContent>
                 <Typography variant="body1" sx={{ mb: 2 }}>
                     Awesome product
