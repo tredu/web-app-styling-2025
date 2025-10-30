@@ -58,11 +58,6 @@ jobs:
           mkdir -p deploy/mui-theme
           cp -r mui-theme/out/* deploy/mui-theme/
 
-      - name: Fix Next.js image links for GitHub Pages
-        run: |
-          find deploy/mui-theme -type f -name '*.html' -exec sed -i 's|src="/|src="https://tredu.github.io/|g' {} +
-          find deploy/mui-theme -type f -name '*.js' -exec sed -i 's|src:"/|src:"https://tredu.github.io/|g' {} +
-          
       - name: Copy Next.js build to mui-theme directory
         run: |
           mkdir -p deploy/mui-theme
