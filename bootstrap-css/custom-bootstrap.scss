@@ -1,0 +1,17 @@
+// import this first
+@import "node_modules/bootstrap/scss/functions";
+
+// modify colors
+$theme-colors: (
+  "primary": #000d54,
+  "secondary": #64748b,
+  "success": #22c55e,
+  "danger": #ef4444,
+  "warning": #eab308,
+  "info": #06b6d4,
+  "light": #f1f5f9,
+  "dark": #0f172a
+);
+
+// import this last
+@import "node_modules/bootstrap/scss/bootstrap";

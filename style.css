@@ -1,0 +1,25 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 20, 36);
+    color: #fff;
+}
+main{
+    max-width: 600px;
+    margin: 0 auto;
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+a, a:visited{
+    color: orange;
+    padding: 0.5em 1em;
+    width: fit-content;
+}
+a:hover{
+    color: orangered;
+}
+section hr{
+    width: 100%;
+    border: 1px solid white;
+}
