@@ -50,7 +50,7 @@ jobs:
       - name: Create deployment directory and copy static content
         run: |
           mkdir -p deploy
-          cp index.html style.css img/favicon.png deploy/
+          cp index.html style.css favicon.png deploy/
           cp -r inline-css head-css file-css tailwind-css bootstrap-css react-tailwind-css deploy/
 
       - name: Copy Next.js build to mui-theme directory
