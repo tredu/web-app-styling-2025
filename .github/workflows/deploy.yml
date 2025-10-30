@@ -47,6 +47,21 @@ jobs:
         working-directory: ./mui-theme
         run: npm run export || echo "No export script, using build output"
 
+
+      # Build and copy antd-vite
+      - name: Install dependencies for antd-vite
+        working-directory: ./antd-vite
+        run: npm ci
+
+      - name: Build antd-vite
+        working-directory: ./antd-vite
+        run: npm run build
+
+      - name: Copy antd-vite build to deploy/antd-vite
+        run: |
+          mkdir -p deploy/antd-vite
+          cp -r antd-vite/dist/* deploy/antd-vite/
+
       - name: Create deployment directory and copy static content
         run: |
           mkdir -p deploy
