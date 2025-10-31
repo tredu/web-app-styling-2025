@@ -37,12 +37,14 @@ const BuyButton = styled.button`
   cursor: pointer;
   margin-top: 8px;
   transition: background 0.2s;
+  text-align: center;
+  
   &:hover {
     background: var(--primary-light);
   }
 `;
 
-export default function ProductCard() {
+export default function ProductCard({productName}) {
   return (
     <Card>
       <Image
@@ -53,7 +55,7 @@ export default function ProductCard() {
         priority
       />
       <CardContent>
-        <Title>Awesome product</Title>
+        <Title>{productName}</Title>
         <BuyButton>Buy Now</BuyButton>
       </CardContent>
     </Card>

@@ -1,5 +1,6 @@
 "use client"
 import ProductCard from "../components/ProductCard";
+import ProductCardNew from "../components/ProductCardNew";
 import Image from "next/image";
 import styled from '@emotion/styled';
 
@@ -21,9 +22,10 @@ export default function Home() {
       </Header>
       <Main>
         <Section>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <ProductCard productName={"ProductCard"}/>
+          <ProductCard productName={"ProductCard"}/>
+          <ProductCardNew productName={"ProductCardNew"}/>
+          <ProductCardNew productName={"ProductCardNew"}/>
         </Section>
       </Main>
       <Footer>
